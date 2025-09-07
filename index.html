@@ -133,17 +133,21 @@
         Your browser does not support the audio element.
     </audio>
 
-    <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('click', function playMusic() {
-      const music = document.getElementById('birthdayMusic');
-      if (music) {
-        music.play().catch(err => console.log('Autoplay blocked:', err));
-      }
-      document.removeEventListener('click', playMusic);
-    });
-  });
+    <audio id="birthdayMusic" loop>
+  <source src="./audio/bday song by simi.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+document.addEventListener('click', function playMusic() {
+  const music = document.getElementById('birthdayMusic');
+  if (music) {
+    music.play().catch(err => console.log('Autoplay blocked:', err));
+  }
+  document.removeEventListener('click', playMusic);
+});
 </script>
+
 
       <div class="cake">
         <div class="fuego"></div>
